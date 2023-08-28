@@ -1,0 +1,386 @@
+metadata:
+  title: Seu Primeiro Currículo 
+  
+---
+
+mandatory: true
+
+question: Faça seu Primeiro Currículo
+subquestion: |
+  *Abreviado como CV, o curriculum vitae/currículo, serve para o profissional se apresentar formalmente, ao recrutador da empresa e mostrar-lhe que é o profissional adequado para ocupar a vaga que está em aberto.*[NEWPAR]
+  **Preencha os campos abaixo para criar seu currículo:**
+  
+fields:
+  
+  - Qual o seu nome inteiro: texto_curto1
+  
+  - Qual o seu título profissonal?: combobox1
+    choices:
+    - Médico
+    - Professor
+    - Engenheiro
+    - Advogado
+    - Enfermeiro(a)
+    - Policial
+    - Psicólogo(a)
+    - Contador(a)
+    - Arquiteto(a)
+    - Tecnico de informática
+    - Jornalista
+    - Programador(a)
+    - Chef de Cozinha
+    - Artista
+    - Mecânico(a)
+    - Designer
+    - Economista
+    - Ator/Atriz
+    - Gerente de Recursos Humanos
+    - Eletricista
+    - Fotógrafo(a)
+    - Bombeiro(a)
+    - Designer Gráfico
+    - Cientista
+    - Analista Financeiro
+    - Farmacêutico(a)
+    - Consultor(a)
+    - Escritor(a)
+    - Astrônomo(a)
+    - Veterinário(a)
+    - Piloto
+    - Analista de dados
+    input type: combobox
+  
+    hint: Analista de dados, Técnico de Informática
+  
+  - Faça um resumo profissional sobre você: texto_longo1
+    input type: area
+    default: Sou um estagiário da vice-presidência no Tribunal de Justiça do Paraná e estou cursando Sistemas de Informação no período noturno pela Universidade Positivo. Eu estou em busca de oportunidades na área de análise de dados na linguagem Python, Power BI e SQL server, tendo interesse desde a criação do dataset até o final do produto com sua análise exploratória e manutenção.
+    
+  - Link do seu portfólio: texto_curto2
+    help: Portfólio é basicamente uma lista dos seus melhores trabalhos como profissional ou estudante.
+    
+---
+#------------------------------------ 2° tela - Experiência profissional ------------------------------
+mandatory: true
+
+question: Última Experiência Profissional
+subquestion: |
+  *A Experiência Profissional é o conjunto de conhecimentos, habilidades e vivências acumuladas por um indivíduo ao longo de sua trajetória de trabalho. Ela é construída através da participação em diferentes cargos, projetos e desafios, permitindo o desenvolvimento de competências técnicas e interpessoais, bem como a adaptação a diversas situações e ambientes de trabalho.*[NEWPAR]
+  **Preencha os campos abaixo para criar seu currículo:**[NEWPAR]
+
+
+fields:
+
+  - Você tem experiência de trabalho? : botoes_de_radio1
+    choices:
+    - Tenho
+    - Não Tenho
+    input type: radio
+    
+  - Nome da Empresa que trabalha/trabalhou: texto_curto3
+    show if:
+      variable: botoes_de_radio1
+      is: "Tenho"
+
+  - Seu cargo profissional: texto_curto4
+    hint: Estagiário, Devenvolvedor júnior, Técnico de TI
+    show if:
+      variable: botoes_de_radio1
+      is: "Tenho"
+
+  - Localidade da empresa?: combobox2
+    choices:
+    - Aracaju - Sergipe
+    - Belém - Pará
+    - Belo Horizonte - Minas Gerais
+    - Boa Vista - Roraima
+    - Brasília - Distrito Federal
+    - Campo Grande - Mato Grosso do Sul
+    - Cuiabá - Mato Grosso
+    - Curitiba - Paraná
+    - Florianópolis - Santa Catarina
+    - Fortaleza - Ceará
+    - Goiânia - Goiás
+    - João Pessoa - Paraíba
+    - Macapá - Amapá
+    - Maceió - Alagoas
+    - Manaus - Amazonas
+    - Natal - Rio Grande do Norte
+    - Palmas - Tocantins
+    - Porto Alegre - Rio Grande do Sul
+    - Porto Velho - Rondônia
+    - Recife - Pernambuco
+    input type: combobox
+    show if:
+      variable: botoes_de_radio1
+      is: "Tenho"
+      
+  - Tipo de localidade: pulldown1
+    choices:
+    - Presencial
+    - Remoto
+    - Híbrido
+    show if:
+      variable: botoes_de_radio1
+      is: "Tenho"
+
+  - Início do trabalho: data1
+    datatype: date
+    show if:
+      variable: botoes_de_radio1
+      is: "Tenho"    
+
+  - Término do trabalho: data2
+    datatype: date
+    show if:
+      variable: botoes_de_radio1
+      is: "Tenho"
+
+  - Descrição do trabalho : texto_longo2
+    input type: area
+    default: Otimização do sistema de triagem jurídica na vice-presidência do tribunal de justiça do Paraná
+    show if:
+      variable: botoes_de_radio1
+      is: "Tenho"
+---
+#------------------------------------ 3° tela - Formação acadêmica ------------------------------------
+mandatory: true
+
+question: Formação Acadêmica
+subquestion: |
+  *A Formação Acadêmica representa o conjunto de estudos e qualificações obtidas por um indivíduo em instituições de ensino, como escolas, faculdades e universidades. Essa formação abrange cursos, diplomas e graus acadêmicos adquiridos em diversas áreas do conhecimento, fornecendo ao indivíduo as bases teóricas e práticas necessárias para compreender, analisar e atuar de maneira competente em sua área de especialização.*[NEWPAR]
+  **Preencha os campos abaixo para criar seu currículo:**[NEWPAR]
+
+fields:
+
+  - Instituto de Ensino?: combobox3
+    choices:
+    - Centro Universitário UniBrasil
+    - Faculdade Bagozzi
+    - Faculdade de Artes do Paraná (FAP)
+    - Faculdade de Tecnologia Inspirar
+    - Faculdade Dom Bosco
+    - Faculdade Educacional da Lapa (FAEL)
+    - Faculdade Evangélica do Paraná (FEPAR)
+    - Faculdade FAE Centro Universitário
+    - Faculdades Integradas Santa Cruz de Curitiba (FARESC)
+    - Faculdades Integradas do Brasil (UniBrasil)
+    - Faculdade Internacional de Curitiba (FACINTER)
+    - Faculdade Opet
+    - Faculdade Pequeno Príncipe (FPP)
+    - Pontifícia Universidade Católica do Paraná (PUCPR)
+    - Universidade Estadual do Paraná (UNESPAR)
+    - Universidade Federal Tecnológica do Paraná (UTFPR)
+    - Universidade Federal do Paraná (UFPR)
+    - Universidade Positivo (UP)
+    - Universidade Tecnológica Federal do Paraná (UTFPR)
+    - Uninter - Centro Universitário Internacional
+    input type: combobox
+  
+    hint: Universidade Positivo (UP)
+
+  - Tipo de Diploma: combobox4
+    choices:
+    - Graduação (Bacharelado, Licenciatura, Tecnólogo)
+    - Pós-Graduação (Especialização)
+    - Mestrado (Mestrado Acadêmico ou Profissional)
+    - Doutorado (Ph.D. ou Doutorado)
+    - Ensino Médio
+    - Ensino Fundamental
+    - Técnico Profissionalizante
+    - Curso Técnico
+    input type: combobox
+  
+    hint: Graduação (Bacharelado, Licenciatura, Tecnólogo)
+    
+  - Área de Estudo: combobox5
+    choices:
+    - Administração
+    - Arquitetura e Urbanismo
+    - Ciências Ambientais
+    - Ciências Biológicas
+    - Ciências da Computação
+    - Ciências Sociais
+    - Design Gráfico
+    - Direito
+    - Economia
+    - Educação Física
+    - Enfermagem
+    - Engenharia Civil
+    - Fisioterapia
+    - Jornalismo
+    - Letras
+    - Matemática
+    - Medicina
+    - Música
+    - Odontologia
+    - Psicologia
+    - Sistemas de Informação
+    input type: combobox
+  
+    hint: Sistemas de Informação
+    help: Qual é o seu curso?
+    
+  - Data de Início: data3
+    datatype: date
+
+      
+  - Data de Término(ou previsto): data4
+    datatype: date
+---
+#------------------------------------ 4° tela - certificados de curso ---------------------------------
+mandatory: true
+
+question: Certificados de Cursos
+subquestion: |
+  *Certificados e cursos representam programas de aprendizado estruturados que visam a aquisição de habilidades específicas em áreas diversas. Esses programas podem variar em duração e profundidade, abrangendo desde workshops e cursos online até certificações profissionais reconhecidas.*[NEWPAR]
+  **Preencha os campos abaixo para criar seu currículo:**[NEWPAR]
+
+
+fields:
+
+  - Você tem algum certificado de curso?: botoes_de_radio2
+    choices:
+    - Tenho
+    - Não Tenho
+    input type: radio
+    help: certificados de cursos da sua área ou que possa lhe destacar profissionalmente
+    
+  - Nome do certificado/curso: texto_curto5
+    hint: Google Analytics Intermediário
+    show if:
+      variable: botoes_de_radio2
+      is: "Tenho"
+      
+  - Organização Emissora?: combobox6
+    choices:
+    - Adobe Creative Cloud
+    - American Heart Association (Cursos de Saúde)
+    - Cisco Networking Academy
+    - Codecademy
+    - CompTIA
+    - Coursera
+    - CFA Institute (Chartered Financial Analyst)
+    - edX
+    - Google Digital Garage
+    - HubSpot Academy
+    - IBM Skills Academy
+    - Khan Academy
+    - LinkedIn Learning (anteriormente Lynda.com)
+    - Microsoft Learn
+    - National Restaurant Association (Treinamento de Alimentos e Bebidas)
+    - Project Management Institute (PMI)
+    - Red Cross (Primeiros Socorros e Treinamento de Emergência)
+    - Salesforce Trailhead
+    - Toastmasters International (Comunicação e Liderança)
+    - Udemy
+    show if:
+      variable: botoes_de_radio2
+      is: "Tenho"
+      
+  - Data de Emissão: data5
+    datatype: date
+    show if:
+      variable: botoes_de_radio2
+      is: "Tenho"
+      
+  - URL do certificado: texto_curto6
+    help: Qual o link do certificado online
+    show if:
+      variable: botoes_de_radio2
+      is: "Tenho"
+
+---
+#------------------------------------ 5° tela - soft skills -------------------------------------------
+mandatory: true
+
+question: Soft Skills
+subquestion: |
+  *As soft skills, também conhecidas como habilidades interpessoais ou habilidades comportamentais, referem-se a um conjunto de atributos pessoais e características que influenciam a forma como interagimos com outras pessoas e lidamos com situações no ambiente de trabalho e na vida cotidiano.* [NEWPAR]
+  **Preencha os campos abaixo para criar seu currículo:**[NEWPAR]
+  
+fields:
+#Comunicação e Relacionamento Interpessoal#
+  - 'Qual destas soft skills de **comunicação** você mais se enquadra?': combobox7
+    choices:
+    - Comunicação eficaz
+    - Empatia
+    - Escuta ativa
+    - Habilidade de feedback
+    - Inteligência emocional
+    - Negociação
+    - Resolução de conflitos
+    - Trabalho em equipe
+    - Compreensão intercultural
+    - Comunicação não verbal
+    
+  - Escreva uma experiência pessoal em relação a soft skills de comunicação escolhida: texto_longo3
+    input type: area
+    default: Em uma empresa de tecnologia, eu demonstrei inteligência emocional ao perceber a tristeza de um colega. Com empatia, abordei a situação, ouviu as preocupações do colega e ofereci suporte, fortalecendo a confiança na equipe e impactando positivamente o ambiente de trabalho.
+
+  - note: '*Lembre-se de selecionar as soft skills que melhor se alinham com a vaga e a empresa para a qual você está se candidatando, destacando aquelas que sejam mais relevantes para o cargo em questão.*[NEWPAR]'
+
+  - 'Qual destas soft skills de **gerenciamento** você mais se enquadra?': combobox8
+    choices:
+    - Adaptação a mudanças
+    - Gestão de conflitos
+    - Gerenciamento de equipes
+    - Liderança
+    - Organização
+    - Resolução de problemas
+    - Tomada de decisão
+    - Tolerância ao estresse
+    - Trabalho sob pressão
+    - Visão estratégica
+    
+  - Escreva uma experiência pessoal em relação a soft skills de gerenciamento escolhida: texto_longo3
+    input type: area
+    default: Em uma empresa de advocacia, eu demonstrei adapatação a mudanças por estar em uma área totalmente nova a minha pessoa e mesmo assim, aprender e triunfar no meio.
+
+---
+#------------------------------------ 6° tela - correção dos dados-------------------------------------
+
+mandatory: true
+
+question: Os dados estão corretos?
+subquestion: |
+  **Nome:**  ${texto_curto1}[NEWPAR]
+  **Título Profissional:**  ${combobox1}[NEWPAR]
+  **Resumo Profissional:**  ${texto_longo1}[NEWPAR]
+  **Link do seu portfólio:**  ${texto_curto2}[NEWPAR]
+
+  *Última Experiência Profissional*[NEWPAR]
+  **Você tem experiência de trabalho?:** ${botoes_de_radio1}[NEWPAR]
+  **Nome da Empresa que trabalha/trabalhou:** ${texto_curto3}[NEWPAR]
+  **Seu cargo profissional:** ${texto_curto4}[NEWPAR]
+  **Localidade da empresa:** ${combobox2}[NEWPAR]
+  **Tipo de localidade:** ${pulldown1}[NEWPAR] 
+  **Início do trabalho:** ${data1}[NEWPAR]
+  **Término do trabalho:** ${data2}[NEWPAR]
+  **Descrição do trabalho:** ${texto_longo2}[NEWPAR]
+
+  *Formação Acadêmica*[NEWPAR]
+  **Instituto de Ensino:**  ${combobox3}[NEWPAR]
+  **Diploma:**  ${combobox4}[NEWPAR]
+  **Área de Estudo:**  ${combobox5}[NEWPAR]
+  **Data de Início:**  ${data3}[NEWPAR]
+  **Data de Término(ou previsto):**  ${data4}[NEWPAR]
+  
+  *Certificados de Cursos*[NEWPAR]
+  **Você tem algum certificado de curso:**  ${botoes_de_radio2}[NEWPAR]
+  **Nome do certificado/curso:**  ${texto_curto5}[NEWPAR]
+  **Organização Emissora:**  ${combobox6}[NEWPAR]
+  **Data de Emissão:**  ${data5}[NEWPAR]
+  **URL do certificado:**  ${texto_curto6}[NEWPAR]
+  
+  *Soft Skills*[NEWPAR]
+  **soft skills de comunicação:**  ${combobox7}[NEWPAR]
+  **experiência pessoal em relação a soft skills de comunicação:**  ${texto_longo3}[NEWPAR]
+  **soft skills de gerenciamento:**  ${combobox8}[NEWPAR]
+  **experiência pessoal em relação a soft skills de gerenciamento:**  ${texto_longo3}[NEWPAR]
+  
+  
+field: usuario_correto
+buttons:
+  - "Sim, estão": True
+  - "Não estão": False 
